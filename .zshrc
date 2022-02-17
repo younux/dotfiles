@@ -1,3 +1,6 @@
+# Add brew to PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Use Starship
 eval "$(starship init zsh)"
 
