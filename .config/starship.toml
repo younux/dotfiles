@@ -60,7 +60,7 @@ format = '\[[$symbol$branch]($style)\]'
 [hostname]
 ssh_only = false
 trim_at  = ''
-format = '@[$hostname](bold red) in '
+format = '@[$hostname]($style) in '
 
 [java]
 format = '\[[$symbol($version)]($style)\]'
