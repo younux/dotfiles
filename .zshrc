@@ -41,3 +41,7 @@ dotfilesgit () {
   git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
 }
 
+# Add isengard cli autocomplete 
+if type "isengardcli" > /dev/null; then
+  eval "$(isengardcli shell-autocomplete)"
+fi

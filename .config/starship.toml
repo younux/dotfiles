@@ -125,6 +125,12 @@ format = '\[[$symbol($version)]($style)\]'
 [scala]
 format = '\[[$symbol($version)]($style)\]'
 
+[status]
+symbol = "❌"
+format = '[\[$symbol $common_meaning$signal_name $status\]]($style) '
+map_symbol = true
+disabled = false
+
 [sudo]
 format = '\[[as $symbol]\]'
 
