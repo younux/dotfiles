@@ -6,9 +6,6 @@ fi
 # Use Starship
 eval "$(starship init zsh)"
 
-# Colorize ls
-alias ls="ls --color=auto"
-
 # ZSH complete
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
@@ -19,6 +16,12 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ZSH zsh-syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Colorize ls
+alias ls="ls --color=auto"
+
+# Add ll alias
+alias ll="ls -al"
 
 # Add Go to PATH
 export PATH="${PATH}:/usr/local/go/bin"
