@@ -29,6 +29,11 @@ export PATH="${PATH}:/usr/local/go/bin"
 # Add Rust to PATH
 source "$HOME/.cargo/env"
 
+# Add isengard cli autocomplete 
+if type "isengardcli" > /dev/null; then
+  eval "$(isengardcli shell-autocomplete)"
+fi
+
 # Add aws cli completion
 complete -C aws_completer aws
 
@@ -44,7 +49,3 @@ dotfilesgit () {
   git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
 }
 
-# Add isengard cli autocomplete 
-if type "isengardcli" > /dev/null; then
-  eval "$(isengardcli shell-autocomplete)"
-fi
