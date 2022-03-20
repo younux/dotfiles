@@ -32,5 +32,5 @@ set encoding=utf-8
 set nowrap
 
 " Highlight the Current Line:
-set cursorline
+" set cursorline
 
