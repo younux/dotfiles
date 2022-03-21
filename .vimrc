@@ -58,5 +58,5 @@ set scrolloff=8
 set undofile
 
 " Enable mouse support
-set mouse=a
+"set mouse=a
 
