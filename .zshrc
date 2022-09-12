@@ -47,6 +47,9 @@ source <(kubectl completion zsh)
 alias k=kubectl
 compdef __start_kubectl k
 
+# Add helm completion
+source <(helm completion zsh)
+
 # Add function for dotfiles
 dotfilesgit () {
   git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
