@@ -26,6 +26,9 @@ alias ll="ls -al"
 # Add Go to PATH
 export PATH="${PATH}:/usr/local/go/bin"
 
+# Add user Go bin directory to PATH 
+export PATH="${PATH}:$HOME/go/bin"
+
 # Add Rust to PATH
 source "$HOME/.cargo/env"
 
@@ -48,4 +51,7 @@ compdef __start_kubectl k
 dotfilesgit () {
   git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
 }
+
+# fzf configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
