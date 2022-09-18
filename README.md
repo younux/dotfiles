@@ -20,6 +20,12 @@ dotfilesgit () {
 }
 ```
 
+- To fetch latest changes from main branch
+
+```
+dotfilesgit fetch https://github.com/younux/dotfiles.git main:main
+```
+
 - To install brew packages
 
 ```
