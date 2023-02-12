@@ -35,6 +35,9 @@ export PATH="${PATH}:$HOME/go/bin"
 # Add Rust to PATH
 source "$HOME/.cargo/env"
 
+# Add nodejs 18 to PATH
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+
 # Add isengard cli autocomplete 
 if type "isengardcli" > /dev/null; then
   eval "$(isengardcli shell-autocomplete)"

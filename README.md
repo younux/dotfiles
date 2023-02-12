@@ -37,3 +37,11 @@ brew bundle install
 ```
 brew bundle dump
 ```
+
+to overwrite an existing Brewfile
+
+```
+brew bundle dump -f
+```
+
+
