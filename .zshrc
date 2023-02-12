@@ -17,6 +17,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZSH zsh-syntax-highlighting: https://github.com/zsh-users/zsh-syntax-highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Remove command lines from the history list when the first character on the line is a space
+setopt HIST_IGNORE_SPACE
+
 # Colorize ls
 alias ls="ls --color=auto"
 
