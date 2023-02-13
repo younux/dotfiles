@@ -1,4 +1,4 @@
-# Add brew to PATH
+# Add brew to PATH (ARM)
 if [ -f "/opt/homebrew/bin/brew" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
@@ -36,7 +36,8 @@ export PATH="${PATH}:$HOME/go/bin"
 source "$HOME/.cargo/env"
 
 # Add nodejs 18 to PATH
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH" # ARM
+export PATH="/usr/local/opt/node@18/bin:$PATH" # Intel
 
 # Add isengard cli autocomplete 
 if type "isengardcli" > /dev/null; then
