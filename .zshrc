@@ -44,6 +44,12 @@ if type "isengardcli" > /dev/null; then
   eval "$(isengardcli shell-autocomplete)"
 fi
 
+# Display neoftech 
+if type "neofetch" > /dev/null; then
+  neofetch
+fi
+
+
 # Add aws cli completion
 complete -C aws_completer aws
 
