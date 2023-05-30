@@ -32,6 +32,7 @@ brew "kubernetes-cli"
 brew "qemu"
 brew "lima"
 brew "minikube"
+brew "neofetch"
 brew "nnn"
 brew "node@18"
 brew "tcl-tk", link: false
