@@ -36,6 +36,7 @@ brew "neofetch"
 brew "nnn"
 brew "node@18"
 brew "tcl-tk", link: false
+brew "pipx"
 brew "python@3.8"
 brew "ripgrep"
 brew "rustup-init"

@@ -4,7 +4,9 @@ if [ -f "/opt/homebrew/bin/brew" ]; then
 fi
 
 # Use Starship
-eval "$(starship init zsh)"
+if command -v "starship" > /dev/null; then
+  eval "$(starship init zsh)"
+fi
 
 # ZSH complete
 autoload bashcompinit && bashcompinit
@@ -26,6 +28,9 @@ alias ls="ls --color=auto"
 # Add ll alias
 alias ll="ls -al"
 
+# Add user local bin path
+export PATH="${PATH}:$HOME/.local/bin"
+
 # Add Go to PATH
 export PATH="${PATH}:/usr/local/go/bin"
 
@@ -40,28 +45,27 @@ export PATH="/opt/homebrew/opt/node@18/bin:$PATH" # ARM
 export PATH="/usr/local/opt/node@18/bin:$PATH" # Intel
 
 # Add isengard cli autocomplete 
-if type "isengardcli" > /dev/null; then
+if command -v "isengardcli" > /dev/null; then
   eval "$(isengardcli shell-autocomplete)"
 fi
 
-# Display neoftech 
-if type "neofetch" > /dev/null; then
-  neofetch
+# Add aws cli completion
+if command -v "aws_completer" > /dev/null; then
+  complete -C aws_completer aws
 fi
 
-
-# Add aws cli completion
-complete -C aws_completer aws
-
 # Add kubectl completion 
-source <(kubectl completion zsh)
-
-# Add alias for kubectl and completion to this alias
-alias k=kubectl
-compdef __start_kubectl k
+if command -v "kubectl" > /dev/null; then
+  source <(kubectl completion zsh)
+  # Add alias for kubectl and completion to this alias
+  alias k=kubectl
+  compdef __start_kubectl k
+fi
 
 # Add helm completion
-source <(helm completion zsh)
+if command -v "helm" > /dev/null; then
+  source <(helm completion zsh)
+fi
 
 # Add function for dotfiles
 dotfilesgit () {
@@ -70,4 +74,9 @@ dotfilesgit () {
 
 # fzf configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Display neoftech 
+if command -v "neofetch" > /dev/null; then
+  neofetch
+fi
 
