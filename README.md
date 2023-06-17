@@ -29,19 +29,11 @@ dotfilesgit fetch https://github.com/younux/dotfiles.git main:main
 - To install brew packages
 
 ```
-brew bundle install
+./config-scripts/brew-bundle-install.sh
 ```
 
 - To create a Brewfile
 
 ```
-brew bundle dump
+./config-scripts/brew-bundle-dump.sh
 ```
-
-to overwrite an existing Brewfile
-
-```
-brew bundle dump -f
-```
-
-

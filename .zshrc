@@ -44,7 +44,7 @@ export PATH="${PATH}:$HOME/.local/bin"
 # Add Go to PATH
 export PATH="${PATH}:/usr/local/go/bin"
 
-# Add user Go bin directory to PATH 
+# Add user Go bin directory to PATH
 export PATH="${PATH}:$HOME/go/bin"
 
 # Add Rust to PATH
@@ -54,7 +54,7 @@ source "$HOME/.cargo/env"
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH" # ARM
 export PATH="/usr/local/opt/node@18/bin:$PATH" # Intel
 
-# Add isengard cli autocomplete 
+# Add isengard cli autocomplete
 if command -v "isengardcli" > /dev/null; then
   eval "$(isengardcli shell-autocomplete)"
 fi
@@ -64,7 +64,7 @@ if command -v "aws_completer" > /dev/null; then
   complete -C aws_completer aws
 fi
 
-# Add kubectl completion 
+# Add kubectl completion
 if command -v "kubectl" > /dev/null; then
   source <(kubectl completion zsh)
   # Add alias for kubectl and completion to this alias
@@ -84,11 +84,10 @@ fi
 
 # fzf configuration
 if [ -f ~/.fzf.zsh ]; then
-    source ~/.fzf.zsh
+  source ~/.fzf.zsh
 fi
 
-# Display neoftech 
+# Display neoftech
 if command -v "neofetch" > /dev/null; then
-  neofetch
+  neofetch --ascii_colors 7
 fi
-
