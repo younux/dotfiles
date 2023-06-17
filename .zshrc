@@ -1,6 +1,11 @@
 # Add brew to PATH (ARM)
 if [ -f "/opt/homebrew/bin/brew" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Load homebrew environment variables
+if command -v "brew" > /dev/null; then
+  eval "$(brew shellenv)"
 fi
 
 # Use Starship
@@ -21,6 +26,11 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Remove command lines from the history list when the first character on the line is a space
 setopt HIST_IGNORE_SPACE
+
+# Add function for dotfiles
+dotfilesgit () {
+  git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
+}
 
 # Colorize ls
 alias ls="ls --color=auto"
@@ -67,13 +77,15 @@ if command -v "helm" > /dev/null; then
   source <(helm completion zsh)
 fi
 
-# Add function for dotfiles
-dotfilesgit () {
-  git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
-}
+# Add docker host using Lima
+if command -v limactl  > /dev/null; then
+  export DOCKER_HOST=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')
+fi
 
 # fzf configuration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+fi
 
 # Display neoftech 
 if command -v "neofetch" > /dev/null; then
