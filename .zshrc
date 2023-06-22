@@ -91,3 +91,11 @@ fi
 if command -v "neofetch" > /dev/null; then
   neofetch --ascii_colors 7
 fi
+
+# Add pyenv configuration
+if command -v "pyenv" > /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
+

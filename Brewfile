@@ -39,7 +39,6 @@ brew "nvm"
 brew "tcl-tk", link: false
 brew "pipx"
 brew "pyenv"
-brew "python@3.8"
 brew "ripgrep"
 brew "rustup-init"
 brew "starship"
