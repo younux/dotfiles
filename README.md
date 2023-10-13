@@ -10,6 +10,7 @@ My dotfiles repo
 git clone --bare https://github.com/younux/dotfiles.git "$HOME/.dotfiles"
 git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" checkout
 git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" submodule update --init --recursive
+dotfilesgit config --local status.showUntrackedFiles no
 ```
 
 - Once the repo and files on your machine use the function `dotfilesgit` defined in `~/.zshrc` instead of `git` command to interact with the repo (bare repo):
