@@ -54,9 +54,6 @@ set hidden
 " start scrolling when 8 lines from top or bottom
 set scrolloff=8
 
-" Save undo history
-set undofile
-
 " Enable mouse support
 "set mouse=a
 
