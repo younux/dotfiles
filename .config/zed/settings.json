@@ -1,0 +1,26 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "terminal": {
+    "dock": "bottom"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "show_whitespaces": "all",
+  "telemetry": {
+    // Send debug info like crash reports.
+    "diagnostics": false,
+    // Send anonymized usage data like what languages you're using Zed with.
+    "metrics": false
+  },
+  "assistant": {
+    "default_open_ai_model": "gpt-3.5-turbo-0613"
+  }
+}
