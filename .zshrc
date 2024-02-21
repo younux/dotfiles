@@ -50,9 +50,10 @@ export PATH="${PATH}:$HOME/go/bin"
 # Add Rust to PATH
 source "$HOME/.cargo/env"
 
-# Add nodejs 18 to PATH
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH" # ARM
-export PATH="/usr/local/opt/node@18/bin:$PATH" # Intel
+# Add nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # Add isengard cli autocomplete
 if command -v "isengardcli" > /dev/null; then
