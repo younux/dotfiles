@@ -1,5 +1,20 @@
-# Bracketed Segments
+# Use custom format
+format = """
+[┌──\\( ](bold white)\
+$all\
+[\\)](bold white)\
+$line_break\
+[└─](bold white)\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
 
+# Bracketed Segments
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
@@ -127,7 +142,7 @@ format = '\[[$symbol($version)]($style)\]'
 
 [status]
 symbol = "❌"
-format = '[\[$symbol $common_meaning$signal_name $status\]]($style) '
+format = '[\[$symbol $common_meaning$signal_name $status\]]($style)'
 map_symbol = true
 disabled = false
 

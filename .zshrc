@@ -88,11 +88,6 @@ if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
 fi
 
-# Display neoftech
-if command -v "neofetch" > /dev/null; then
-  neofetch --ascii_colors 7
-fi
-
 # Add pyenv configuration
 if command -v "pyenv" > /dev/null; then
   export PYENV_ROOT="$HOME/.pyenv"
