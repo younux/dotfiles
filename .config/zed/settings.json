@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "notification_panel": {
+    "dock": "right"
+  },
   "terminal": {
     "dock": "bottom"
   },
@@ -14,7 +17,13 @@
     "dock": "left"
   },
   "assistant": {
-    "default_open_ai_model": "gpt-3.5-turbo-0613"
+    "version": "1",
+    "provider": {
+      "name": "openai",
+      "type": "openai",
+      "default_model": "gpt-4-turbo-preview",
+      "api_url": "http://localhost:11434/v1"
+    }
   },
   "telemetry": {
     // Send debug info like crash reports.
@@ -26,6 +35,20 @@
   "remove_trailing_whitespace_on_save": false,
   "ensure_final_newline_on_save": false,
   "show_whitespaces": "all",
+  "indent_guides": {
+    "coloring": "fixed"
+    // "background_coloring": "indent_aware"
+  },
+  "experimental.theme_overrides": {
+    "editor.indent_guide_active": "#ff7fff"
+    // "editor.indent_guide": "#ffffff79"
+    // "accents": [
+    //   "#ffff40",
+    //   "#7fff7f",
+    //   "#ff7fff",
+    //   "#4fecec"
+    // ]
+  },
   "language_overrides": {
     "YAML": {
       "tab_size": 2
