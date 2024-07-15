@@ -7,6 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": {
+    "mode": "dark",
+    "dark": "One Dark",
+    "light": "One Light"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
   "notification_panel": {
     "dock": "right"
   },
@@ -19,10 +27,14 @@
   "assistant": {
     "version": "1",
     "provider": {
-      "name": "openai",
-      "type": "openai",
-      "default_model": "gpt-4-turbo-preview",
-      "api_url": "http://localhost:11434/v1"
+      "default_model": {
+        "name": "llama3:latest",
+        "max_tokens": 2048,
+        "keep_alive": -1
+      },
+      "name": "ollama",
+      // Recommended setting to allow for model startup
+      "low_speed_timeout_in_seconds": 30
     }
   },
   "telemetry": {
