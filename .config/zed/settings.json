@@ -7,38 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "features": {
-    "inline_completion_provider": "copilot"
-  },
-  "language_models": {
-    "ollama": {
-      "low_speed_timeout_in_seconds": 30
-    }
-  },
-  "theme": {
-    "mode": "dark",
-    "dark": "One Dark",
-    "light": "One Light"
-  },
-  "outline_panel": {
-    "dock": "left"
-  },
-  "notification_panel": {
-    "dock": "right"
-  },
-  "terminal": {
-    "dock": "bottom"
-  },
-  "collaboration_panel": {
-    "dock": "left"
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
-    },
-    "version": "2"
-  },
   "telemetry": {
     // Send debug info like crash reports.
     "diagnostics": false,
@@ -51,7 +19,7 @@
   "show_whitespaces": "boundary",
   "indent_guides": {
     "coloring": "fixed"
-    // "background_coloring": "indent_aware"
+    //"background_coloring": "indent_aware"
   },
   "experimental.theme_overrides": {
     "editor.indent_guide_active": "#ff7fff"
@@ -62,10 +30,5 @@
     //   "#ff7fff",
     //   "#4fecec"
     // ]
-  },
-  "language_overrides": {
-    "YAML": {
-      "tab_size": 2
-    }
   }
 }

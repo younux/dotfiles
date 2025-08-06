@@ -6,35 +6,47 @@ My dotfiles repo
 
 - To clone the repo and files:
 
-```
-git clone --bare https://github.com/younux/dotfiles.git "$HOME/.dotfiles"
-git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" checkout
-git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" submodule update --init --recursive
-dotfilesgit config --local status.showUntrackedFiles no
-```
+  ```
+  git clone --bare https://github.com/younux/dotfiles.git "$HOME/.dotfiles"
+  git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" checkout
+  git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" submodule update --init --recursive
+  dotfilesgit config --local status.showUntrackedFiles no
+  ```
 
 - Once the repo and files on your machine use the function `dotfilesgit` defined in `~/.zshrc` instead of `git` command to interact with the repo (bare repo):
 
-```
-dotfilesgit () {
-  git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
-}
-```
+  ```
+  dotfilesgit () {
+    git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
+  }
+  ```
 
 - To fetch latest changes from main branch
 
-```
-dotfilesgit fetch https://github.com/younux/dotfiles.git main:main
-```
+  ```
+  dotfilesgit fetch https://github.com/younux/dotfiles.git main:main
+  ```
+
+- To fetch latest git submodules from main branch (for exampl `zsh-autosuggestions` and `zsh-syntax-highlighting`)
+
+  ```
+  dotfilesgit submodule foreach git pull origin master
+  ```
+
+- To push new commits
+
+  ```
+  dotfilesgit push origin main
+  ```
 
 - To install brew packages
 
-```
-./config-scripts/brew-bundle-install.sh
-```
+  ```
+  ./config-scripts/brew-bundle-install.sh
+  ```
 
 - To create a Brewfile
 
-```
-./config-scripts/brew-bundle-dump.sh
-```
+  ```
+  ./config-scripts/brew-bundle-dump.sh
+  ```
