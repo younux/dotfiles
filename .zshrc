@@ -74,12 +74,11 @@ if command -v "helm" > /dev/null; then
   source <(helm completion zsh)
 fi
 
-# Add docker host using Lima
-if command -v "limactl" > /dev/null; then
-  export DOCKER_HOST=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')
-  # Alias docker to docker.lima
-  alias docker=docker.lima
-fi
+# Add docker host using Lima (replaced with colima)
+# if command -v "limactl" > /dev/null && command -v "docker" > /dev/null; then
+#   docker context create lima-docker --docker "host=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')" > /dev/null 2>&1
+#   docker context use lima-docker > /dev/null 2>&1
+# fi
 
 # Set up fzf key bindings and fuzzy completion
 if command -v "fzf" > /dev/null; then
