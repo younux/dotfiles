@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "Tokyo Night Storm",
+  "icon_theme": "Material Icon Theme",
+  "show_edit_predictions": false,
   "telemetry": {
     // Send debug info like crash reports.
     "diagnostics": false,

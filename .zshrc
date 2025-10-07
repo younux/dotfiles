@@ -99,3 +99,6 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 fi
 
+# Define the base directory for user-specific configuration file (in macos)
+# Used by lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
