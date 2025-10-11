@@ -45,6 +45,10 @@ alias ll="ls -al"
 # Add user local bin directory to PATH
 export PATH="${PATH}:$HOME/.local/bin"
 
+# Define the base directory for user-specific configuration file (in macos)
+# Used by lazygit and others
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Add Go bin directory to PATH
 export PATH="${PATH}:/usr/local/go/bin"
 
@@ -99,6 +103,7 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 fi
 
-# Define the base directory for user-specific configuration file (in macos)
-# Used by lazygit
-export XDG_CONFIG_HOME="$HOME/.config"
+# # Zellij autostart
+# if command -v "fzf" > /dev/null; then
+#     eval "$(zellij setup --generate-auto-start zsh)"
+# fi
