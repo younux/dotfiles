@@ -55,6 +55,9 @@ export PATH="${PATH}:/usr/local/go/bin"
 # Add user Go bin directory to PATH
 export PATH="${PATH}:$HOME/go/bin"
 
+# Define default editor
+export EDITOR=zed
+
 # Add Rust to PATH
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
@@ -107,3 +110,15 @@ fi
 # if command -v "fzf" > /dev/null; then
 #     eval "$(zellij setup --generate-auto-start zsh)"
 # fi
+
+# Yazi configuration
+if command -v "yazi" > /dev/null; then
+    # Use y to use yazi and change directory
+    function y() {
+    	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    	yazi "$@" --cwd-file="$tmp"
+    	IFS= read -r -d '' cwd < "$tmp"
+    	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    	rm -f -- "$tmp"
+    }
+fi
