@@ -1,4 +1,35 @@
 git:
   paging:
     colorArg: always
-    pager: delta --paging=never --side-by-side --line-numbers
+    pager: delta --paging=never --side-by-side --line-numbers --syntax-theme "TokyoNight"
+gui:
+  theme:
+    activeBorderColor:
+      - "#ff9e64"
+      - "bold"
+    inactiveBorderColor:
+      - "#7aa2f7"
+    searchingActiveBorderColor:
+      - "#9ece6a"
+      - "bold"
+    optionsTextColor:
+      - "#bb9af7"
+    selectedLineBgColor:
+      - "#414868"
+    inactiveViewSelectedLineBgColor:
+      - "#414868"
+      - "bold"
+    cherryPickedCommitFgColor:
+      - "#1a1b26"
+    cherryPickedCommitBgColor:
+      - "#7dcfff"
+    # # Foreground color of marked base commit (for rebase)
+    # markedBaseCommitFgColor:
+    #   - blue
+    # # Background color of marked base commit (for rebase)
+    # markedBaseCommitBgColor:
+    #   - yellow
+    unstagedChangesColor:
+      - "#f7768e"
+    defaultFgColor:
+      - "#c0caf5"

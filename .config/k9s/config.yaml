@@ -1,0 +1,6 @@
+k9s:
+  # Number of retries once the connection to the api-server is lost. Default 15.
+  maxConnRetry: 15
+  ui:
+    skin: catppuccin-mocha
+
