@@ -47,6 +47,7 @@ orientation = "landscape"
 # repository. You may also create your own theme by creating a new file in a `themes`
 # directory in your configuration directory (see the `config.toml` location above).
 theme = "tokyonight"
+# theme = "catppuccin"
 
 # Feature-specific configurations
 # Each feature can have its own configuration section
