@@ -1,23 +1,12 @@
 gui:
-  # Tokyo night
+  # Catppuccin mocha
   theme:
     activeBorderColor:
-      - "#ff9e64"
+      - "#89b4fa"
       - bold
     inactiveBorderColor:
-      - "#7aa2f7"
+      - "#a6adc8"
     selectedLineBgColor:
-      - "#414868"
+      - "#585b70"
     optionsTextColor:
-      - "#bb9af7"
-  # # Catppuccin mocha
-  # theme:
-  #   activeBorderColor:
-  #     - "#89b4fa"
-  #     - bold
-  #   inactiveBorderColor:
-  #     - "#a6adc8"
-  #   selectedLineBgColor:
-  #     - "#313244"
-  #   optionsTextColor:
-  #     - "#89b4fa"
+      - "#89b4fa"

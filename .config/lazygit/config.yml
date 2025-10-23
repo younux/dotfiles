@@ -1,60 +1,26 @@
 git:
   paging:
     colorArg: always
-    pager: delta --paging=never --side-by-side --line-numbers --syntax-theme "TokyoNight"
-    # pager: delta --paging=never --side-by-side --line-numbers --syntax-theme "Catppuccin Mocha"
+    pager: delta --paging=never --side-by-side --line-numbers --syntax-theme "Catppuccin Mocha"
 gui:
-  # Tokyo night
+  # Catppuccin mocha
   theme:
     activeBorderColor:
-      - "#ff9e64"
-      - "bold"
+      - '#89b4fa'
+      - bold
     inactiveBorderColor:
-      - "#7aa2f7"
-    searchingActiveBorderColor:
-      - "#9ece6a"
-      - "bold"
+      - '#a6adc8'
     optionsTextColor:
-      - "#bb9af7"
+      - '#89b4fa'
     selectedLineBgColor:
-      - "#414868"
-    inactiveViewSelectedLineBgColor:
-      - "#414868"
-      - "bold"
-    cherryPickedCommitFgColor:
-      - "#1a1b26"
+      - '#585b70'
     cherryPickedCommitBgColor:
-      - "#7dcfff"
-    # # Foreground color of marked base commit (for rebase)
-    # markedBaseCommitFgColor:
-    #   - blue
-    # # Background color of marked base commit (for rebase)
-    # markedBaseCommitBgColor:
-    #   - yellow
+      - '#45475a'
+    cherryPickedCommitFgColor:
+      - '#89b4fa'
     unstagedChangesColor:
-      - "#f7768e"
+      - '#f38ba8'
     defaultFgColor:
-      - "#c0caf5"
-  # # Catppuccin mocha
-  # authorColors:
-  #   '*': '#b4befe'
-  # theme:
-  #   activeBorderColor:
-  #     - '#89b4fa'
-  #     - bold
-  #   inactiveBorderColor:
-  #     - '#a6adc8'
-  #   optionsTextColor:
-  #     - '#89b4fa'
-  #   selectedLineBgColor:
-  #     - '#313244'
-  #   cherryPickedCommitBgColor:
-  #     - '#45475a'
-  #   cherryPickedCommitFgColor:
-  #     - '#89b4fa'
-  #   unstagedChangesColor:
-  #     - '#f38ba8'
-  #   defaultFgColor:
-  #     - '#cdd6f4'
-  #   searchingActiveBorderColor:
-  #     - '#f9e2af'
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'

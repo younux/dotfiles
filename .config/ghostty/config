@@ -2,5 +2,4 @@ macos-option-as-alt = left
 keybind = alt+left=unbind
 keybind = alt+right=unbind
 
-theme = TokyoNight
-# theme = Catppuccin Mocha
+theme = Catppuccin Mocha
