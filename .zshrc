@@ -112,10 +112,22 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 fi
 
-# # Zellij autostart
-# if command -v "fzf" > /dev/null; then
-#     eval "$(zellij setup --generate-auto-start zsh)"
-# fi
+# Zellij welcome screen start function
+if command -v "zellij" > /dev/null; then
+    z(){
+        # If welcome session exited, we need to delete it
+        if zellij ls -n | grep -E '^welcome-session .*EXITED' >/dev/null; then
+            zellij delete-session welcome-session # delete dead session
+        fi
+        # If welcome session is active, we attach to it
+        if zellij ls -n | grep -E '^welcome-session ' >/dev/null; then
+            zellij attach welcome-session
+        else
+        # We don't have a welcome session yet, we create it
+            zellij --session welcome-session --new-session-with-layout welcome
+        fi
+    }
+fi
 
 # Yazi configuration
 if command -v "yazi" > /dev/null; then

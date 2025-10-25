@@ -3,3 +3,4 @@ keybind = alt+left=unbind
 keybind = alt+right=unbind
 
 theme = Catppuccin Mocha
+command = zsh -c 'source ~/.zshrc && z'
